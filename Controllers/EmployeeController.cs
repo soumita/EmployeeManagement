@@ -39,17 +39,17 @@ namespace EmployeeManagement.Controllers
             return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id }, employee);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Employee>> DeleteEmployee(int id)
-        {
-            var employee = await _employeeRepositories.GetByIdAsync(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-            await _employeeRepositories.DeleteEmployeeAsync(id);
-            return NoContent();
-        }
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Employee>> DeleteEmployee(int id)
+        //{
+        //    var employee = await _employeeRepositories.GetByIdAsync(id);
+        //    if (employee == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    await _employeeRepositories.DeleteEmployeeAsync(id);
+        //    return NoContent();
+        //}
 
     }
 }
